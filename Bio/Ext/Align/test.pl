@@ -1,13 +1,14 @@
 #!/usr/local/bin/perl
 
 ## Test framework for pSW XS stuff
-## $Id: test.pl,v 1.1.1.1 1999/09/16 13:32:51 birney Exp $
+## $Id: test.pl,v 1.2 2001/05/22 14:55:36 jason Exp $
 
 ## We start with some black magic to print on failure.
 BEGIN { $| = 1; print "1..2\n"; }
 END {print "not ok 1\n" unless $loaded;}
 
 use Bio::Ext::Align;
+use lib '.';
 
 $loaded = 1;
 print "ok 1\n";    # 1st test passes.
